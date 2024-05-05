@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+admin.site.register(UserProfile)
+admin.site.register(Hotel)
+admin.site.register(Comment)
+admin.site.register(HotelImage)
+admin.site.register(Room)
+admin.site.register(ImageRoom)
+admin.site.register(Booking)
