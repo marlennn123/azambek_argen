@@ -53,10 +53,6 @@ class Room(models.Model):
     capacity = models.IntegerField(default=0)
     price_per_night = models.BigIntegerField(default=0)
 
-    def __str__(self):
-        return self.room_number
-
-
 class ImageRoom(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
@@ -68,6 +64,8 @@ class ImageRoom(models.Model):
 STATUS_CHOICES = (
     ("Бронь", "Бронь"),
     ("Cвободный", "Cвободный"),
+    ('Отменено', 'Отменено'),
+    ('В ожидании', 'В ожидании'),
 )
 
 
@@ -76,6 +74,6 @@ class Booking(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     check_in_date = models.DateField()
     check_out_date = models.DateField()
-    total_price = models.IntegerField()
+    price = models.IntegerField()
     status = models.CharField(choices=STATUS_CHOICES, max_length=32)
 

@@ -14,7 +14,7 @@ class UserProfileView(ListAPIView):
 class UserProfileDetailView(RetrieveUpdateDestroyAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 class HotelView(ListAPIView):
     queryset = Hotel.objects.all()
@@ -28,7 +28,7 @@ class HotelView(ListAPIView):
 class HotelDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Hotel.objects.all()
     serializer_class = HotelSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class CommentView(ListAPIView):
@@ -38,7 +38,7 @@ class CommentView(ListAPIView):
 class CommentDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 class HotelImageView(ListAPIView):
     queryset = Hotel.objects.all()
@@ -47,7 +47,7 @@ class HotelImageView(ListAPIView):
 class HotelImageDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Hotel.objects.all()
     serializer_class = HotelImageSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class RoomView(ListAPIView):
@@ -60,7 +60,7 @@ class RoomView(ListAPIView):
 class RoomDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 class ImageRoomView(ListAPIView):
     queryset = ImageRoom.objects.all()
@@ -69,14 +69,14 @@ class ImageRoomView(ListAPIView):
 class ImageRoomDetailView(RetrieveUpdateDestroyAPIView):
     queryset = ImageRoom.objects.all()
     serializer_class = ImageRoomSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 class BookingView(ListAPIView):
-    queryset = UserProfile.objects.all()
+    queryset = Booking.objects.all()
     serializer_class = BookingSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 class BookingDetailView(RetrieveUpdateDestroyAPIView):
-    queryset = UserProfile.objects.all()
+    queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
